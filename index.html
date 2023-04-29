@@ -43,7 +43,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="subtitle">About me</h1>
-                    <p>Welcome to my portfolio website! My name is Biggo Bushon Routh, and I am a student of Computer
+                        <p>Welcome to my portfolio website! My name is Biggo Bushon Routh, and I am a student of Computer
                         Science and Engineering at Leading University.
 
                         I specialize in developing mobile applications using Flutter, and I take pride in designing and
@@ -58,8 +58,8 @@
 
                         I am always eager to learn and stay up-to-date with the latest advancements in technology. As a
                         result, I am confident in my ability to take on new challenges and provide the best possible
-                        solutions to complex problems.<br><br>
-                    <h2>Skills:</h2>
+                        solutions to complex problems.<br><br></p>
+                    <!-- <h2>Skills:</h2>
                     <br>
                     Flutter:<br>
 
@@ -85,11 +85,53 @@
                         <li>Deployment of machine learning models using cloud platforms such as AWS or Google Cloud.
                         </li>
                     </ol>
-                    </p>
+                    </p> -->
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education Qualification</p>
+                        <p class="tab-links" onclick="opentab('recent')">Recent Activities</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>App development</span><br><br>Flutter, Firebase, Sqflite, REST APIs and so on</li><br>
+                            <li><span>Web Development</span><br><br>HTML, CSS, JavaScript</li><br>
+                            <li><span>Machine Learning</span><br><br>Sklearn, Pandas, Matplotlib, Numpy, Seaborn, Tensorflow</li><br>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020 - Current</span><br><br>B.Sc. in Computer Science & Engineering at Leading University</li><br>
+                            <li><span>2017 - 2019</span><br><br>HSC(Higher Secondary School Certificate)</li><br>
+                            <li><span>2015 - 2017</span><br><br>SSC(Secondary School Certificate</li><br>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="recent">
+                        <ul>
+                            <li><span>Bootcamps & Certifications</span><br><br><li>Cyber-safe bootcamp</li><li>Flutter(Mobile Application Development) bootcamp</li><li>Research bootcamp</li></li><br>
+                            <li><span>Competitions</span><br><br><li>DU Code Samurai 2022 Hackathon</li><li>Bitfest 2022, Hackathon, Leading University</li><li>Techstrom 2021, Programming Contest</li></li><br>
+                            <li><span>Publications</span><br><br>Paper titled "CKD Prediction Performance Analysis of Machine Learning Algorithms" accepted in IEEE IEMCON 2022 Conference</li><br>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 </body>
 
 </html>
