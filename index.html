@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biggo Routh-Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/304f96ef8c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
                     <h1>Hi! I'm <span>Biggo</span></h1>
                     <p>I am Biggo, a CS background student and <br>mobile application developer (Flutter), trying to
                         learn new stuff. <br>I also work on Machine Learning.</p>
-                    <a href="#">Download CV</a>
+                    <a href="Files/CV (30-04-2023).pdf" download>Download CV</a>
                 </div>
                 <div class="header-image">
                     <img src="images/DSC03946-01-02 (1).jpeg">
@@ -117,9 +118,48 @@
             </div>
         </div>
     </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> routh.biggo123@gmail.com</p>
+                    <p><i class="fa-solid fa-paper-plane"></i> cse_2012020310@lus.ac.bd</p>
+                    <p><i class="fa-solid fa-square-phone"></i> 01729807254</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" id="name" name="Name" placeholder="Your name" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" id="message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn" onclick="navigation()">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function navigation(){
+            var name=document.getElementById("name").value;
+            var email=document.getElementById("email").value;
+            var message=document.getElementById("message").value;
+            // if(name=='' || email=='' || message==''){
+            //     alert("Fill up the fields first");
+            // }
+            // else{
+               window.location.assign('registrationpage.html');
+            //}
+        }
+
 
         function opentab(tabname){
             for(tablink of tablinks){
