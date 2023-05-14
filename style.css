@@ -4,7 +4,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     background: #080808;
     color: #fff;
@@ -137,6 +139,7 @@ span {
     /* width: 250px; */
     width: 110%;
     height: auto;
+    max-width: 1000px;
     margin-left: 80px;
     /* margin-top: -120px; */
 }
@@ -396,4 +399,62 @@ form .btn{
 }
 .seemore-btn:hover{
     background: #ff004f;
+}
+nav .fa-solid{
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    .header-image img {
+        display: none;
+        /* width: 80%;
+        margin-left: 0; */
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .subtitle{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
 }
